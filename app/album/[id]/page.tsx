@@ -55,7 +55,7 @@ return (
           <div className="flex flex-col gap-5 sm:gap-6 md:gap-8">
 
             <header className="text-center border-y border-[#cfc6b6] py-4 sm:py-5">
-              <p className="text-[9px] sm:text-[10px] md:text-xs tracking-[0.3em] sm:tracking-[0.4em] text-[#9b917f] mb-2">FACULTY</p>
+              <p className="text-[9px] sm:text-[10px] md:text-xs tracking-[0.3em] sm:tracking-[0.4em] text-[#9b917f] md:mb-2">FACULTY</p>
               <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-semibold text-[#514a3e]">교수진</h1>
             </header>
 
@@ -102,7 +102,7 @@ return (
           <div className="flex flex-col gap-5 sm:gap-6 md:gap-8">
 
             <header className="text-center border-y border-[#cfc6b6] py-4 sm:py-5">
-              <p className="text-[9px] sm:text-[10px] md:text-xs tracking-[0.3em] sm:tracking-[0.4em] text-[#9b917f] mb-2">GRADUATION</p>
+              <p className="text-[9px] sm:text-[10px] md:text-xs tracking-[0.3em] sm:tracking-[0.4em] text-[#9b917f] md:mb-2">GRADUATION</p>
               <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-semibold text-[#514a3e]">졸업생</h1>
             </header>
 
@@ -156,7 +156,7 @@ return (
           <div className="flex flex-col gap-5 sm:gap-6 md:gap-8">
 
             <header className="text-center border-y border-[#cfc6b6] py-4 sm:py-5">
-              <p className="text-[9px] sm:text-[10px] md:text-xs tracking-[0.25em] sm:tracking-[0.4em] text-[#9b917f] mb-2">DEPARTMENT ARCHIVE</p>
+              <p className="text-[9px] sm:text-[10px] md:text-xs tracking-[0.25em] sm:tracking-[0.4em] text-[#9b917f] md:mb-2">DEPARTMENT ARCHIVE</p>
               <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-semibold text-[#514a3e] break-keep">학과 사진 · 행사  영상</h1>
             </header>
 
