@@ -173,8 +173,8 @@ export default function AlbumPage() {
                     </div>
 
                     <div className="text-center">
-                      <p className="font-serif text-xs md:text-xl font-semibold tracking-[0.14em] text-[#514a3e]">{executive.name}</p>
-                      <p className="md:mt-2 text-[10px] md:text-sm font-medium tracking-[0.16em] text-[#857a69]">{executive.position}</p>
+                      <p className="font-serif text-sm md:text-xl font-semibold tracking-[0.14em] text-[#514a3e]">{executive.name}</p>
+                      <p className="md:mt-2 text-xs md:text-sm font-medium tracking-[0.16em] text-[#857a69]">{executive.position}</p>
                     </div>
 
                   </div>
