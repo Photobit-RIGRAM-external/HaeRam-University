@@ -126,7 +126,7 @@ export default function AlbumPage() {
 
                   <div className="text-center">
                     <p className="font-serif text-xl md:text-2xl font-semibold tracking-[0.12em] text-[#514a3e]">{chairman.name}</p>
-                    <div className="flex items-center justify-center gap-3 mt-1 md:mt-3">
+                    <div className="flex items-center justify-center gap-3 md:mt-3">
                       <p className="text-sm md:text-base font-medium tracking-[0.16em] text-[#857a69]">{chairman.position}</p>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ export default function AlbumPage() {
 
                   <div className="text-center">
                     <p className="font-serif text-xl md:text-2xl font-semibold tracking-[0.12em] text-[#514a3e]">{president.name}</p>
-                    <div className="flex items-center justify-center gap-3 mt-1 md:mt-3">
+                    <div className="flex items-center justify-center gap-3 md:mt-3">
                       <p className="text-sm md:text-base font-medium tracking-[0.16em] text-[#857a69]">{president.position}</p>
                     </div>
                   </div>
