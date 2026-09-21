@@ -107,7 +107,7 @@ export default function AlbumPage() {
 
               <header className="text-center border-y border-[#cfc6b6] py-5">
                 <p className="text-[10px] md:text-xs tracking-[0.4em] text-[#9b917f] mb-2">LEADERSHIP</p>
-                <h2 className="text-xl md:text-2xl font-serif font-semibold text-[#514a3e]">임원진</h2>
+                <h2 className="text-base md:text-2xl font-serif font-semibold text-[#514a3e]">임원진</h2>
               </header>
 
               {chairman && (
@@ -125,9 +125,9 @@ export default function AlbumPage() {
                   </div>
 
                   <div className="text-center">
-                    <p className="font-serif text-xl md:text-2xl font-semibold tracking-[0.12em] text-[#514a3e]">{chairman.name}</p>
+                    <p className="font-serif text-base md:text-2xl font-semibold tracking-[0.12em] text-[#514a3e]">{chairman.name}</p>
                     <div className="flex items-center justify-center gap-3 md:mt-3">
-                      <p className="text-sm md:text-base font-medium tracking-[0.16em] text-[#857a69]">{chairman.position}</p>
+                      <p className="text-xs md:text-base font-medium tracking-[0.16em] text-[#857a69]">{chairman.position}</p>
                     </div>
                   </div>
 
@@ -149,9 +149,9 @@ export default function AlbumPage() {
                   </div>
 
                   <div className="text-center">
-                    <p className="font-serif text-xl md:text-2xl font-semibold tracking-[0.12em] text-[#514a3e]">{president.name}</p>
+                    <p className="font-serif text-base md:text-2xl font-semibold tracking-[0.12em] text-[#514a3e]">{president.name}</p>
                     <div className="flex items-center justify-center gap-3 md:mt-3">
-                      <p className="text-sm md:text-base font-medium tracking-[0.16em] text-[#857a69]">{president.position}</p>
+                      <p className="text-xs md:text-base font-medium tracking-[0.16em] text-[#857a69]">{president.position}</p>
                     </div>
                   </div>
 
@@ -173,7 +173,7 @@ export default function AlbumPage() {
                     </div>
 
                     <div className="text-center">
-                      <p className="font-serif text-lg md:text-xl font-semibold tracking-[0.14em] text-[#514a3e]">{executive.name}</p>
+                      <p className="font-serif text-base md:text-xl font-semibold tracking-[0.14em] text-[#514a3e]">{executive.name}</p>
                       <p className="md:mt-2 text-xs md:text-sm font-medium tracking-[0.16em] text-[#857a69]">{executive.position}</p>
                     </div>
 
