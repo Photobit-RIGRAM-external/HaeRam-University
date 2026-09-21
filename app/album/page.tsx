@@ -200,7 +200,7 @@ export default function AlbumPage() {
                       href={`/album/${dept.id}`}
                       className="group flex items-center justify-between px-4 md:px-5 py-4 border border-[#d9d1c3] bg-[#faf8f3] text-[#514a3e] transition-all duration-300 hover:bg-[#fffdf8] hover:border-[#bdb3a3]"
                     >
-                      <span className="font-serif text-sm md:text-base">{dept.name}</span>
+                      <span className="font-serif text-xs md:text-base">{dept.name}</span>
                       <span className="text-[#9b917f] text-sm transition-transform duration-300 group-hover:translate-x-1">→</span>
                     </Link>
                   </div>
