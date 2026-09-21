@@ -106,7 +106,7 @@ export default function AlbumPage() {
             <div className="flex flex-col gap-10">
 
               <header className="text-center border-y border-[#cfc6b6] py-5">
-                <p className="text-[10px] md:text-xs tracking-[0.4em] text-[#9b917f] mb-2">LEADERSHIP</p>
+                <p className="text-[10px] md:text-xs tracking-[0.4em] text-[#9b917f] md:mb-2">LEADERSHIP</p>
                 <h2 className="text-lg md:text-2xl font-serif font-semibold text-[#514a3e]">임원진</h2>
               </header>
 
@@ -189,7 +189,7 @@ export default function AlbumPage() {
             <div className="flex flex-col gap-7">
 
               <header className="text-center border-y border-[#cfc6b6] py-5">
-                <p className="text-[10px] md:text-xs tracking-[0.4em] text-[#9b917f] mb-2">DEPARTMENTS</p>
+                <p className="text-[10px] md:text-xs tracking-[0.4em] text-[#9b917f] md:mb-2">DEPARTMENTS</p>
                 <h2 className="text-lg md:text-2xl font-serif font-semibold text-[#514a3e]">학과별 졸업사진</h2>
               </header>
 
