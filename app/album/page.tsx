@@ -59,7 +59,7 @@ export default function AlbumPage() {
                 <div className="h-px bg-[#d8d0c2] flex-1" />
               </div>
 
-              <h1 className="font-serif font-semibold text-[#514a3e] tracking-tight leading-snug text-[clamp(0.95rem,3vw,1.5rem)]">
+              <h1 className="font-serif font-semibold text-[#514a3e] tracking-tight leading-snug text-lg md:text-2xl">
                 {school?.graduation_year}년 {school?.school_name} 전자졸업앨범
               </h1>
 
@@ -107,7 +107,7 @@ export default function AlbumPage() {
 
               <header className="text-center border-y border-[#cfc6b6] py-5">
                 <p className="text-[10px] md:text-xs tracking-[0.4em] text-[#9b917f] mb-2">LEADERSHIP</p>
-                <h2 className="text-base md:text-2xl font-serif font-semibold text-[#514a3e]">임원진</h2>
+                <h2 className="text-lg md:text-2xl font-serif font-semibold text-[#514a3e]">임원진</h2>
               </header>
 
               {chairman && (
@@ -190,7 +190,7 @@ export default function AlbumPage() {
 
               <header className="text-center border-y border-[#cfc6b6] py-5">
                 <p className="text-[10px] md:text-xs tracking-[0.4em] text-[#9b917f] mb-2">DEPARTMENTS</p>
-                <h2 className="text-base md:text-2xl font-serif font-semibold text-[#514a3e]">학과별 졸업사진</h2>
+                <h2 className="text-lg md:text-2xl font-serif font-semibold text-[#514a3e]">학과별 졸업사진</h2>
               </header>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
