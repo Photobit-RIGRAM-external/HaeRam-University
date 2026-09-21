@@ -158,7 +158,7 @@ export default function AlbumPage() {
                 </div>
               )}
 
-              <div className="grid grid-cols-5 gap-3 md:gap-6">
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-3 md:gap-6">
                 {otherExecutives?.map((executive: any) => (
                   <div key={executive.id} className="flex flex-col items-center gap-2 min-w-0">
                     <div className="w-full overflow-hidden border border-[#d5cec2] bg-[#faf8f3] p-1 cursor-pointer transition-all duration-300 hover:shadow-[0_4px_14px_rgba(81,74,62,0.08)]">
