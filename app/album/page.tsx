@@ -173,8 +173,8 @@ export default function AlbumPage() {
                     </div>
 
                     <div className="text-center">
-                      <p className="font-serif text-base md:text-xl font-semibold tracking-[0.14em] text-[#514a3e]">{executive.name}</p>
-                      <p className="md:mt-2 text-xs md:text-sm font-medium tracking-[0.16em] text-[#857a69]">{executive.position}</p>
+                      <p className="font-serif text-xs md:text-xl font-semibold tracking-[0.14em] text-[#514a3e]">{executive.name}</p>
+                      <p className="md:mt-2 text-[10px] md:text-sm font-medium tracking-[0.16em] text-[#857a69]">{executive.position}</p>
                     </div>
 
                   </div>
@@ -190,7 +190,7 @@ export default function AlbumPage() {
 
               <header className="text-center border-y border-[#cfc6b6] py-5">
                 <p className="text-[10px] md:text-xs tracking-[0.4em] text-[#9b917f] mb-2">DEPARTMENTS</p>
-                <h2 className="text-xl md:text-2xl font-serif font-semibold text-[#514a3e]">학과별 졸업사진</h2>
+                <h2 className="text-base md:text-2xl font-serif font-semibold text-[#514a3e]">학과별 졸업사진</h2>
               </header>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
