@@ -86,7 +86,7 @@ return (
                   <div className="flex items-center justify-center gap-1.5 sm:gap-2 mt-3 sm:mt-4 w-full min-w-0">
                     <div className="w-full text-center">
                       <p className="font-serif text-lg md:text-xl font-semibold tracking-[0.14em] text-[#514a3e]">{staff.name}</p>
-                      <p className="mt-2 text-xs md:text-sm font-medium tracking-[0.16em] text-[#857a69]">{staff.position}</p>
+                      <p className="md:mt-2 text-xs md:text-sm font-medium tracking-[0.16em] text-[#857a69]">{staff.position}</p>
                     </div>
                   </div>
 
