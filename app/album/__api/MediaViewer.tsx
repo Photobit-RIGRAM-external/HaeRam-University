@@ -67,13 +67,15 @@ export default function MediaViewer({
           </div>
         )}
 
-        {mediaType === 'video' && (
-          <div className="relative z-10 flex h-[80vh] w-[80vw] items-center justify-center">
+       {mediaType === 'video' && (
+          <div className="relative z-[10000] flex items-center justify-center w-[96vw] h-[90vh] sm:w-[90vw] sm:h-[85vh]">
             <video
               src={mediaUrl}
               controls
               autoPlay
-              className="h-full w-full rounded-lg object-contain"
+              playsInline
+              preload="metadata"
+              className="max-h-full max-w-full rounded-lg object-contain"
             >
               브라우저에서 비디오를 재생할 수 없습니다.
             </video>
