@@ -22,15 +22,18 @@ export default function DepartmentPage({params,}: { params: Promise<{ id: string
 
   const [mediaUrl, setMediaUrl] = useState<string | null>(null);
   const [mediaType, setMediaType] = useState<'image' | 'video' | null>(null);
+  const [mediaWidth, setMediaWidth] = useState<number | null>(null);
+  const [mediaHeight, setMediaHeight] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  const expandMedia = (url: string,type: 'image' | 'video') => {
+  const expandMedia = (url: string, width: number, height: number,type: 'image' | 'video') => {
       setMediaUrl(url);
       setMediaType(type);
+      setMediaWidth(width);
+      setMediaHeight(height);
       setIsOpen(true);
     };
 
-  const sortedStudents = [...(students ?? [])].sort((a, b) => a.name.localeCompare(b.name, 'ko-KR'));
 return (
     <div className="min-h-screen w-full bg-[#ebe7dd] px-2 sm:px-4 md:px-6 lg:px-10 py-4 sm:py-6 md:py-8 lg:py-12">
       <div className="w-full max-w-[1280px] mx-auto bg-[#f5f1e8] border-x border-[#d8d0c1]">
@@ -100,7 +103,7 @@ return (
                         fill
                         sizes="(max-width: 640px) 125px, (max-width: 768px) 150px, 180px"
                         className="object-cover grayscale-[10%] transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
-                        onClick={() => expandMedia(staff.profile_url, 'image')}
+                        onClick={() => expandMedia(staff.profile_url, 600,800,'image')}
                         loading="eager"
                       />
                     </div>
@@ -131,7 +134,7 @@ return (
             </header>
 
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-7">
-              {sortedStudents?.map((student: any) => (
+              {students?.map((student: any) => (
                 <div
                   key={student.id}
                   className="group flex flex-col items-center min-w-0 px-2 pt-6 pb-5 sm:px-3 sm:pt-7 sm:pb-6 md:px-4 md:pt-8 md:pb-7 border border-[#d9d1c3] bg-[#faf8f3] transition-all duration-300 hover:bg-white hover:shadow-md"
@@ -145,7 +148,7 @@ return (
                           fill
                           sizes="(max-width: 640px) 44vw, (max-width: 768px) 28vw, 150px"
                           className="object-cover grayscale-[15%] cursor-pointer transition-all duration-500 group-hover:grayscale-0"
-                          onClick={() => expandMedia(student.profile_graduate, 'image')}
+                          onClick={() => expandMedia(student.profile_graduate, 600, 800,'image')}
                         />
                       </div>
                     )}
@@ -158,7 +161,7 @@ return (
                           fill
                           sizes="(max-width: 640px) 44vw, (max-width: 768px) 28vw, 150px"
                           className="object-contain grayscale-[15%] cursor-pointer transition-all duration-500 group-hover:grayscale-0"
-                          onClick={() => expandMedia(student.profile_default, 'image')}
+                          onClick={() => expandMedia(student.profile_default, 750, 1050,'image')}
                         />
                       </div>
                     )}
@@ -195,7 +198,7 @@ return (
                           fill
                           sizes="(max-width: 640px) 100vw, 50vw"
                           className="object-cover grayscale-[8%] transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
-                          onClick={() => expandMedia(medium.url, 'image')}
+                          onClick={() => expandMedia(medium.url, 1600,900,'image')}
                         />
                       </div>
                     )}
@@ -207,7 +210,7 @@ return (
                           className="w-full h-full object-cover cursor-pointer"
                           controls
                           playsInline
-                          onClick={() => expandMedia(medium.url, 'video')}
+                          onClick={() => expandMedia(medium.url, 1600,900,'video')}
                         />
                       </div>
                     )}
@@ -231,6 +234,8 @@ return (
         <MediaViewer
           mediaUrl={mediaUrl}
           mediaType={mediaType}
+          mediaWidth={mediaWidth}
+          mediaHeight={mediaHeight}
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
         />
