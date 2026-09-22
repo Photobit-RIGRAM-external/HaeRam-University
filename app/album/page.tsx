@@ -30,11 +30,15 @@ export default function AlbumPage() {
 
     const [mediaUrl, setMediaUrl] = useState<string | null>(null);
     const [mediaType, setMediaType] = useState<'image' | 'video' | null>(null);
+    const [mediaWidth, setMediaWidth] = useState<number | null>(null);
+    const [mediaHeight, setMediaHeight] = useState<number | null>(null);
     const [isOpen, setIsOpen] = useState(false);
 
-    const expandMedia = (url: string,type: 'image' | 'video') => {
+    const expandMedia = (url: string, width: number, height: number, type: 'image' | 'video') => {
       setMediaUrl(url);
       setMediaType(type);
+      setMediaWidth(width);
+      setMediaHeight(height);
       setIsOpen(true);
     };
 
@@ -76,7 +80,7 @@ export default function AlbumPage() {
                   <Image 
                     src={foreground?.url} alt="학교 전경" fill
                     className="object-cover transition-transform duration-700 hover:scale-[1.015]"
-                    onClick={() =>expandMedia(foreground.url, 'image')}
+                    onClick={() =>expandMedia(foreground.url, 2000, 1000,'image')}
                   />
                   )}
               </div>
@@ -128,7 +132,7 @@ export default function AlbumPage() {
                       width={1144}
                       height={643}
                       className="object-cover w-full h-full transition-transform duration-500 hover:scale-[1.015]"
-                      onClick={() =>expandMedia(chairman.profile_url, 'image')}
+                      onClick={() =>expandMedia(chairman.profile_url, 900, 600,'image')}
                     />
                   </div>
 
@@ -152,7 +156,7 @@ export default function AlbumPage() {
                       width={1144}
                       height={643}
                       className="object-cover w-full h-full transition-transform duration-500 hover:scale-[1.015]"
-                      onClick={() =>expandMedia(president.profile_url, 'image')}
+                      onClick={() =>expandMedia(president.profile_url, 900, 600, 'image')}
                     />
                   </div>
 
@@ -176,7 +180,7 @@ export default function AlbumPage() {
                         width={1144}
                         height={643}
                         className="object-cover w-full h-full transition-transform duration-500 h"
-                        onClick={() => expandMedia(executive.profile_url, 'image')}
+                        onClick={() => expandMedia(executive.profile_url, 600, 800,'image')}
                       />
                     </div>
 
@@ -221,6 +225,8 @@ export default function AlbumPage() {
           <MediaViewer
             mediaUrl={mediaUrl}
             mediaType={mediaType}
+            mediaWidth={mediaWidth}
+            mediaHeight={mediaHeight}
             isOpen={isOpen}
             onClose={() => setIsOpen(false)}
           />
