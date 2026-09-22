@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from 'next/link';
 
 import { useDepartment } from "@/app/_modules/query";
 import { useStaffs } from "@/app/_modules/query";
@@ -28,12 +29,34 @@ export default function DepartmentPage({params,}: { params: Promise<{ id: string
       setMediaType(type);
       setIsOpen(true);
     };
+
+  const sortedStudents = [...(students ?? [])].sort((a, b) => a.name.localeCompare(b.name, 'ko-KR'));
 return (
     <div className="min-h-screen w-full bg-[#ebe7dd] px-2 sm:px-4 md:px-6 lg:px-10 py-4 sm:py-6 md:py-8 lg:py-12">
       <div className="w-full max-w-[1280px] mx-auto bg-[#f5f1e8] border-x border-[#d8d0c1]">
 
         <section className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-3 sm:pb-4 md:pb-5 lg:pb-6">
           
+            <div className="mb-4 sm:mb-5 md:mb-6">
+              <Link
+                href="/album"
+                className="
+                  group
+                  inline-flex items-center gap-1.5
+                  text-[9px] sm:text-[10px]
+                  tracking-[0.2em]
+                  text-[#9b917f]
+                  transition-colors duration-300
+                  hover:text-[#514a3e]
+                "
+              >
+                <span className="text-xs sm:text-2xl transition-transform duration-300 group-hover:-translate-x-0.5">
+                  ←
+                </span>
+                <span className="text-xs sm:text-lg">BACK</span>
+              </Link>
+          </div>
+
           <div className="bg-[#f5f1e8] px-4 sm:px-6 md:px-8 py-5 sm:py-6 md:py-7 w-full">
             <div className="flex flex-col items-center text-center">
 
@@ -78,12 +101,13 @@ return (
                         sizes="(max-width: 640px) 125px, (max-width: 768px) 150px, 180px"
                         className="object-cover grayscale-[10%] transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
                         onClick={() => expandMedia(staff.profile_url, 'image')}
+                        loading="eager"
                       />
                     </div>
                   )}
 
 
-                  <div className="flex items-center justify-center gap-1.5 sm:gap-2 mt-3 sm:mt-4 w-full min-w-0">
+                  <div className="flex items-center justify-center gap-1.5 sm:gap-2 mt-2 md:mt-3 sm:mt-4 w-full min-w-0">
                     <div className="w-full text-center">
                       <p className="font-serif text-lg md:text-xl font-semibold tracking-[0.14em] text-[#514a3e]">{staff.name}</p>
                       <p className="md:mt-2 text-xs md:text-sm font-medium tracking-[0.16em] text-[#857a69]">{staff.position}</p>
@@ -106,8 +130,8 @@ return (
               <h1 className="text-lg sm:text-xl md:text-2xl font-serif font-semibold text-[#514a3e]">졸업생</h1>
             </header>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-7">
-              {students?.map((student: any) => (
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-7">
+              {sortedStudents?.map((student: any) => (
                 <div
                   key={student.id}
                   className="group flex flex-col items-center min-w-0 px-2 pt-6 pb-5 sm:px-3 sm:pt-7 sm:pb-6 md:px-4 md:pt-8 md:pb-7 border border-[#d9d1c3] bg-[#faf8f3] transition-all duration-300 hover:bg-white hover:shadow-md"
