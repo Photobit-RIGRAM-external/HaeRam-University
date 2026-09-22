@@ -204,14 +204,24 @@ return (
                     )}
 
                     {medium.type === 'video' && medium.url && (
-                      <div className="relative w-full aspect-video overflow-hidden border border-[#d5cec2] bg-[#e9e5dc]">
+                      <div
+                        className="relative w-full aspect-video overflow-hidden border border-[#d5cec2] bg-[#e9e5dc] cursor-pointer"
+                        onClick={() => expandMedia(medium.url, 1600, 900, 'video')}
+                      >
                         <video
                           src={medium.url}
-                          className="w-full h-full object-cover cursor-pointer"
-                          controls
+                          className="w-full h-full object-cover"
                           playsInline
-                          onClick={() => expandMedia(medium.url, 1600,900,'video')}
+                          preload="metadata"
+                          muted
                         />
+
+                        {/* 재생 아이콘 */}
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm">
+                            ▶
+                          </div>
+                        </div>
                       </div>
                     )}
 
