@@ -5,19 +5,27 @@ import Image from 'next/image';
 interface MediaViewerProps {
   mediaUrl: string | null;
   mediaType: 'image' | 'video' | null;
+  mediaWidth?: number | null;
+  mediaHeight?: number | null;
   isOpen: boolean;
   onClose: () => void;
 }
 
+
+
 export default function MediaViewer({
   mediaUrl,
   mediaType,
+  mediaWidth,
+  mediaHeight,
   isOpen,
   onClose,
 }: MediaViewerProps) {
   if (!isOpen || !mediaUrl || !mediaType) {
     return null;
   }
+
+  const isPortrait = mediaWidth && mediaHeight ? mediaHeight > mediaWidth : false;
 
   return (
   <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -37,12 +45,22 @@ export default function MediaViewer({
         </button>
 
         {mediaType === 'image' && (
-          <div className="relative z-10 flex h-[80vh] w-[80vw] items-center justify-center">
+          <div
+              className={`
+                relative z-10 flex items-center justify-center
+
+                ${
+                  isPortrait
+                    ? 'h-[55vh] w-[70vw] sm:h-[69vh] sm:w-[69vw]'
+                    : 'h-[80vh] w-[92vw] sm:h-[80vh] sm:w-[80vw]'
+                }
+              `}
+            >
             <Image
               src={mediaUrl}
               alt="이미지"
-              width={1600}
-              height={900}
+              width={mediaWidth || 2000}
+              height={mediaHeight || 1000}
               className="h-full w-full rounded-lg object-contain"
               unoptimized
             />
