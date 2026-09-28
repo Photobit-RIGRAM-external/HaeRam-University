@@ -96,7 +96,7 @@ export default function AlbumPage() {
                     key={history.id}
                     className="mb-2 md:mb-3 break-inside-avoid text-[10px] md:text-sm text-[#514a3e] leading-relaxed flex"
                   >
-                    <span className="font-semibold text-[#7d7365] shrink-0 text-xs md:text-xl">
+                    <span className="font-semibold text-[#7d7365] shrink-0">
                       {history.date}
                     </span>
 
@@ -104,7 +104,7 @@ export default function AlbumPage() {
                       ·
                     </span>
 
-                    <span className="min-w-0 text-xs md:text-xl">
+                    <span className="min-w-0">
                       {history.title}
                     </span>
                   </div>
